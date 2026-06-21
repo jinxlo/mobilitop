@@ -1,0 +1,30 @@
+import { z } from "zod";
+
+export const settingsSchema = z.object({
+  businessName: z.string().min(2),
+  businessDescription: z.string().optional().nullable(),
+  logoUrl: z.string().optional().nullable(),
+  faviconUrl: z.string().optional().nullable(),
+  primaryColor: z.string().default("#1E3A5F"),
+  secondaryColor: z.string().default("#F5EFE6"),
+  accentColor: z.string().default("#C9A24A"),
+  whatsappNumber: z.string().min(6),
+  phoneNumber: z.string().optional().nullable(),
+  email: z.string().email().optional().nullable().or(z.literal("")),
+  instagramUrl: z.string().optional().nullable(),
+  facebookUrl: z.string().optional().nullable(),
+  tiktokUrl: z.string().optional().nullable(),
+  address: z.string().optional().nullable(),
+  googleMapsUrl: z.string().optional().nullable(),
+  openingHours: z.string().optional().nullable(),
+  defaultCurrency: z.string().default("USD"),
+  heroTitle: z.string().min(3),
+  heroSubtitle: z.string().default(""),
+  whatsappDefaultMessage: z.string().default("Hola, estoy viendo su página web y necesito más información."),
+  deliveryInfo: z.string().optional().nullable(),
+  warrantyInfo: z.string().optional().nullable(),
+  paymentMethods: z.array(z.string()).default([]),
+  policies: z.string().optional().nullable(),
+  seoTitle: z.string().max(70).optional().nullable(),
+  seoDescription: z.string().max(160).optional().nullable()
+});
