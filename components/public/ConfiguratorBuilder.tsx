@@ -132,7 +132,7 @@ export function ConfiguratorBuilder({ whatsappNumber }: { whatsappNumber: string
             <div>
               <div className="overflow-hidden rounded-[2rem] border border-slate-100 bg-[#F5EFE6]">
                 <div className="relative aspect-[4/3]">
-                  <Image src={selectedImage} alt={`${selectedModel.label} ${selectedFabric.label} ${selectedColor.label}`} fill sizes="(min-width: 768px) 55vw, 100vw" className="object-cover" priority />
+                  <Image src={selectedImage} alt={`${selectedModel.label} ${selectedFabric.label} ${selectedColor.label}`} fill sizes="(min-width: 768px) 55vw, 100vw" className="object-cover" />
                 </div>
               </div>
               <dl className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -175,7 +175,7 @@ export function ConfiguratorBuilder({ whatsappNumber }: { whatsappNumber: string
       <aside className="lg:sticky lg:top-28">
         <div className="overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-[#1E3A5F]/10">
           <div className="relative aspect-square bg-[#F5EFE6]">
-            <Image src={selectedImage} alt={`Preview ${selectedModel.label}`} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" priority />
+            <Image src={selectedImage} alt={`Preview ${selectedModel.label}`} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             <div className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#1E3A5F] backdrop-blur">Imagen pre-creada</div>
           </div>
           <div className="p-6">

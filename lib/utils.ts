@@ -44,5 +44,5 @@ export function calculateDiscount(price: number, previousPrice?: number | null) 
 }
 
 export function firstImage<T extends { imageUrl: string }>(images: T[] | undefined) {
-  return images?.[0]?.imageUrl ?? "/images/product-placeholder.svg";
+  return images?.[0]?.imageUrl ?? "/images/product-placeholder.png";
 }

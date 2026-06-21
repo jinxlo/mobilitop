@@ -5,15 +5,15 @@ export function ProductFilters({ categories, brands, params = {} }: { categories
   return (
     <form className="soft-card mb-8 grid gap-3 rounded-3xl p-4 md:grid-cols-5" action="/productos">
       <input className="rounded-2xl border px-4 py-3 md:col-span-2" name="search" placeholder="Buscar producto" defaultValue={params.search ?? params.q} />
-      <select className="rounded-2xl border px-4 py-3" name="category">
+      <select className="rounded-2xl border px-4 py-3" name="category" defaultValue={params.category ?? ""}>
         <option value="">Categoría</option>
-        {categories.map((category) => <option value={category.slug} key={category.id} selected={params.category === category.slug}>{category.name}</option>)}
+        {categories.map((category) => <option value={category.slug} key={category.id}>{category.name}</option>)}
       </select>
-      <select className="rounded-2xl border px-4 py-3" name="brand">
+      <select className="rounded-2xl border px-4 py-3" name="brand" defaultValue={params.brand ?? ""}>
         <option value="">Marca</option>
-        {brands.map((brand) => <option value={brand.slug} key={brand.id} selected={params.brand === brand.slug}>{brand.name}</option>)}
+        {brands.map((brand) => <option value={brand.slug} key={brand.id}>{brand.name}</option>)}
       </select>
-      <select className="rounded-2xl border px-4 py-3" name="sort">
+      <select className="rounded-2xl border px-4 py-3" name="sort" defaultValue={params.sort ?? "recent"}>
         <option value="recent">Más recientes</option>
         <option value="price_asc">Menor precio</option>
         <option value="price_desc">Mayor precio</option>
@@ -24,7 +24,7 @@ export function ProductFilters({ categories, brands, params = {} }: { categories
       <input className="rounded-2xl border px-4 py-3" name="mattressType" placeholder="Tipo" defaultValue={params.mattressType} />
       <input className="rounded-2xl border px-4 py-3" name="minPrice" type="number" placeholder="Precio mín." defaultValue={params.minPrice} />
       <input className="rounded-2xl border px-4 py-3" name="maxPrice" type="number" placeholder="Precio máx." defaultValue={params.maxPrice} />
-      <select className="rounded-2xl border px-4 py-3" name="availability">
+      <select className="rounded-2xl border px-4 py-3" name="availability" defaultValue={params.availability ?? ""}>
         <option value="">Disponibilidad</option>
         <option value="IN_STOCK">Disponible</option>
         <option value="ON_REQUEST">Bajo pedido</option>

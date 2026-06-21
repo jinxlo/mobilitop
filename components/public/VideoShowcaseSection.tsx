@@ -24,7 +24,6 @@ export function VideoShowcaseSection() {
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/10 p-3 shadow-2xl">
             <video
               className="aspect-video w-full rounded-[2rem] bg-black object-cover"
-              autoPlay
               muted
               loop
               playsInline

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Footer } from "@/components/public/Footer";
 import { Header } from "@/components/public/Header";
@@ -32,7 +32,12 @@ export const metadata: Metadata = {
   },
   formatDetection: {
     telephone: true
-  },
+  }
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#1E3A5F"
 };
 
